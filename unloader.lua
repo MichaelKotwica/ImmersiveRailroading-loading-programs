@@ -56,7 +56,7 @@ term.clear()
  
     while true do -- Keep transferring items until freight car is full
         if (string.find(Detector.info().id, "freight") and Detector.info().speed == 0) then
-            local cagoPercent = (Detector.info().cargo_percent - 100) * (-1)
+            local cargoPercent = (Detector.info().cargo_percent - 100) * (-1)
             transferAmmount = transposer.transferItem(input, output, transferRate)
  
             if transferAmmount == 0 then
